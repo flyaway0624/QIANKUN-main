@@ -8,7 +8,7 @@ import Error from "../pages/Error";
 
 
 export const routerMap = [
-  { path: "/", name: "Index", component: Index, auth: false },
+  { path: "/", name: "Index", component: Index, auth: true },
   { path: "/login", name: "Login", component: Login, auth: false },
   { path: "/error", name: "error", component: Error, auth: false }
 ];
