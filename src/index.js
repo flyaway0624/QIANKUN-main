@@ -9,9 +9,7 @@ import apps from './apps'
 function render({ appContent, loading }) {
   const container = document.getElementById('main-root');
   ReactDOM.render(
-    <React.StrictMode>
-      <App loading={loading} content={appContent} />
-    </React.StrictMode>,
+      <App loading={loading} content={appContent} />,
     container,
   )
 }
@@ -44,8 +42,6 @@ registerMicroApps(microApps, {
     }
   ]
 })
-
-setDefaultMountApp('/react')
 
 start();
 

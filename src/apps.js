@@ -1,19 +1,19 @@
 import store from './store/store'
 const microApps = [
   {
-    name: 'Homw',
+    name: '微应用Home',
     entry: process.env.REACT_APP_SUB_REACT,
-    activeRule: '/react',
+    activeRule: '/#/react',
     container: '#subapp-viewport',
   },
   {
-    name: 'About',
+    name: '微应用About',
     entry: process.env.REACT_APP_SUB_REACT,
-    activeRule: '/react/about',
+    activeRule: '/#/about',
     container: '#subapp-viewport',
   },
   {
-    name: 'Todo',
+    name: '主应用Todo',
     entry: process.env.REACT_APP_SUB_REACT,
     activeRule: '/todo',
     container: null,
