@@ -1,10 +1,12 @@
+import React from 'react'
+import loginUrl from '../../public/login.jpeg'
 
 const Login = () => {
-  localStorage.setItem("user",121212)
     return (
-      <>
+      <div className='login_content'>
+        <img src={loginUrl}/>
         Login
-      </>
+      </div>
     )
   }
   export default Login;
