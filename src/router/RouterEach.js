@@ -18,7 +18,7 @@ class RouterLogin extends Component {
     );
     console.log('location.pathname',location.pathname)
     if (location.pathname === "/") {
-      history.replace('/')
+      history.replace('/react')
     }
 
     if (!targetRouterConfig &&location.pathname !== "/") {
