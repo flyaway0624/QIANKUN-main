@@ -9,6 +9,8 @@
 
 .login_content{
   height: 100vh;
+  background:url('../public/login.jpeg') no-repeat 0 0;
+  background-size: cover;
 }
 
 @media (prefers-reduced-motion: no-preference) {

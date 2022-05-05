@@ -4,7 +4,7 @@ import loginUrl from '../../public/login.jpeg'
 const Login = () => {
     return (
       <div className='login_content'>
-        <img src={loginUrl}/>
+        {/* <img src={loginUrl}/> */}
         Login
       </div>
     )
