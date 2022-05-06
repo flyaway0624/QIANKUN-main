@@ -97,6 +97,10 @@
   background-color:#1890ff;
   color: #fff;
 }
+.mainapp .logout{
+  position: absolute;
+  right: 0;
+}
 .mainapp-header{
   height: 60px;
   line-height: 60px;

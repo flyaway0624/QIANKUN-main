@@ -4,7 +4,7 @@ import { Form, Input, Button } from 'antd';
 const Login = () => {
   const onFinish = (values) => {
     localStorage.setItem("user",values.username);
-    window.location.href = '#/react'
+    window.location.href = '/#/react'
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <div className='login_content'>
       <div className='content'>
-        <div className='login_title'>Login</div>
+        <div className='login_title'>登录</div>
         <div className='login_form'>
           <Form
             name="basic"
@@ -26,28 +26,24 @@ const Login = () => {
             autoComplete="off"
           >
             <Form.Item
-              label="Username"
+              label="用户名"
               name="username"
-              rules={[{ required: true, message: 'Please input your username!' }]}
+              rules={[{ required: true, message: '请输入用户名!' }]}
             >
               <Input />
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label="密码"
               name="password"
-              rules={[{ required: true, message: 'Please input your password!' }]}
+              rules={[{ required: true, message: '请输入密码!' }]}
             >
               <Input.Password />
             </Form.Item>
 
-            {/* <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item> */}
-
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
               <Button type="primary" htmlType="submit" >
-                Submit
+                登录
               </Button>
             </Form.Item>
           </Form>

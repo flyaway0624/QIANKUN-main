@@ -1,15 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import apps from '../apps';
 import store from '../store/store'
-import classNames from 'classnames';
 import '../App.css';
 import HomeContent from './Content';
 import routerMap from '../router/routerMap';
-import { Layout,Menu } from 'antd';
+import { Layout, Menu, Button } from 'antd';
 const { Header, Sider, Content } = Layout;
 
 function Index(props) {
-  const [activeUrl, setActiveUrl] = useState(apps?.[0]?.activeRule);
   const [storeState, setStoreState] = useState(store.getGlobalState())
 
 
@@ -18,27 +16,25 @@ function Index(props) {
     setStoreState(state)
   })
 
-  useEffect(() => {
-    const path = window?.location?.pathname;
-    const activeMenu = apps.find(item => path?.includes(item.activeRule));
-    if (activeMenu) {
-      setActiveUrl(activeMenu?.activeRule);
-    }
-  }, [])
+
   const push = (title, href) => {
-    console.log(href)
-    setActiveUrl(href);
-    // window.history.pushState({}, title, '#'+href);
     window.location.href = '#' + href
   }
- 
+
+  const logout = () => {
+    localStorage.setItem('user','')
+    window.location.href = '/login'
+  }
+
+  
+
   return (
     <div className="mainapp">
       <Layout>
         <Sider>
           <div className='logo'>
-          <img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"/>
-          Ant Design
+            <img alt="logo" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" />
+            Ant Design
           </div>
           <Menu>
             {apps.map((menu) => (
@@ -49,7 +45,14 @@ function Index(props) {
           </Menu>
         </Sider>
         <Layout>
-          <Header>Header</Header>
+          <Header>
+            <span className='mainapp-header-store'>{`基座中显示-主应用的数据：${JSON.stringify(storeState)}`}</span>
+            <span className='logout'>
+              <Button type="link" block onClick={logout}>
+                退出登录
+              </Button>
+            </span>
+          </Header>
           <Content>
             <main id="subapp-viewport"></main>
             <HomeContent routerMap={routerMap} />
