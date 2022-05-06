@@ -13,21 +13,21 @@
   background:url('https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg') no-repeat 0 0;
   background-size: cover;
   position: relative;
-}
-.login_content .content{
-  width: 300px;
-  height: 400px;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.login_content .content .login_title{
-  color: rgba(0, 0, 0, 0.85);
-  font-weight: 600;
-  font-size: 33px;
-  text-align: center;
-}
+  .content{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    .login_title{
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 600;
+      font-size: 33px;
+      text-align: center;
+    }
+  }
+} 
 .login_form{
   margin-top: 40px;
 }
@@ -68,39 +68,39 @@
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-}
-.mainapp .logo{
-  height: 48px;
-  color: #fff;
-}
-.mainapp .logo img{
-  height: 32px;
-  margin: 8px 10px;
-}
-.mainapp .ant-layout-header{
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
-  height: 48px;
-  line-height: 48px;
-}
-.mainapp .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
-  border-right: none !important;
-}
-.mainapp .ant-menu{
-  background: none;
-  color: hsla(0,0%,100%,.65);
-}
-.mainapp .ant-menu-item-active{
-  color: #fff;
-}
-.mainapp .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
-  background-color:#1890ff;
-  color: #fff;
-}
-.mainapp .logout{
-  position: absolute;
-  right: 0;
-}
+  .logo{
+    height: 48px;
+    color: #fff;
+    img{
+      height: 32px;
+      margin: 8px 10px;
+    }
+  }
+  .ant-layout-header{
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    height: 48px;
+    line-height: 48px;
+  }
+  .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left{
+    border-right: none !important;
+  }
+  .ant-menu{
+    background: none;
+    color: hsla(0,0%,100%,.65);
+  }
+  .ant-menu-item-active{
+    color: #fff;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color:#1890ff;
+    color: #fff;
+  }
+  .logout{
+    position: absolute;
+    right: 0;
+  }
+} 
 .mainapp-header{
   height: 60px;
   line-height: 60px;

@@ -1,5 +1,6 @@
 // import './App.less';
 import React from "react";
+import { hot } from 'react-hot-loader/root';
 import FrontendAuth from "./router/FrontendAuth";
 import {routerMap} from "./router/routerLogin";
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -14,5 +15,5 @@ function App() {
     );
 }
 
-export default App;
+export default hot(App);
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import apps from '../apps';
 import store from '../store/store'
-import '../App.css';
+import '../App.scss';
 import HomeContent from './Content';
 import routerMap from '../router/routerMap';
 import { Layout, Menu, Button } from 'antd';
