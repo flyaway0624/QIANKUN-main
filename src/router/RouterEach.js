@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router';
 import { Route } from 'react-router-dom';
-import { createHashHistory } from 'history'
-const history = createHashHistory()
+import { createBrowserHistory } from 'history'
+const history = createBrowserHistory()
 // import { CacheSwitch } from 'react-router-cache-route'
 class RouterLogin extends Component {
 

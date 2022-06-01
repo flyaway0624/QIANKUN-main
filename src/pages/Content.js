@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { withRouter, HashRouter } from 'react-router-dom';
+import { withRouter, Switch } from 'react-router-dom';
 import RouterEach from '../router/RouterEach';
 
 
@@ -8,9 +8,9 @@ class Content extends Component {
   render() {
     let routerMap = this.props.routerMap
     return (
-      <HashRouter >
+      <Switch >
         <RouterEach routerConfig={routerMap} />
-      </HashRouter >
+      </Switch >
     )
   }
 }

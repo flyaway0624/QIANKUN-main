@@ -3,13 +3,13 @@ const microApps = [
   {
     name: '微应用Home',
     entry: process.env.REACT_APP_SUB_REACT,
-    activeRule: '/#/react',
+    activeRule: '/react',
     container: '#subapp-viewport',
   },
   {
     name: '微应用About',
     entry: process.env.REACT_APP_SUB_REACT,
-    activeRule: '/#/react/about',
+    activeRule: '/react/about',
     container: '#subapp-viewport',
   },
   {

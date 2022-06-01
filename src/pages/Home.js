@@ -18,7 +18,7 @@ function Index(props) {
 
 
   const push = (title, href) => {
-    window.location.href = '#' + href
+    window.location.href = href
   }
 
   const logout = () => {
